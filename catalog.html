@@ -4,9 +4,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
-  <body>
+  <body class="inner-page">
 
     <header class="main-header">
       <nav class="main-navigation">
@@ -25,7 +28,7 @@
       </nav>
     </header>
 
-    <main class="container">.
+    <main class="container">
       <h1>Магазин готовых шаблонов</h1>
       <section class="sorting">
         <h2>Сортировать:</h2>
@@ -34,6 +37,17 @@
       <section class="filters">
         <h2 class="visually-hidden">Фильтр готовых шаблонов</h2>
         <form class="filter-form" method="GET" action="https://echo.htmlacademy.ru">
+          <fieldset class="filter-price">
+            <legend>Стоимоть:</legend>
+            <div>
+              <label for="filter-min-price">От</label>
+              <input type="number" id="filter-min-price" name="min-price" value="0">
+            </div>
+            <div>
+              <label for="filter-max-price">До</label>
+              <input type="number" id="filter-max-price" name="max-price" value="1500">
+            </div>
+          </fieldset>
           <fieldset class="filter-grid">
             <legend>Сетка:</legend>
             <ul class="filter-grid-list">
@@ -76,14 +90,13 @@
             </li>
             </ul>
           </fieldset>
-          <button type="submit">Показать</button>
+          <button class="filter-button" type="submit">Показать</button>
         </form>
       </section>
       <section class="templates">
         <h2 class="visually-hidden">Готовые шаблоны</h2>
         <ul class="templates-list">
           <li class="templates-item">
-            <span class="templates-item-header"></span>
             <img src="img/img-sedona.jpg" width="360" height="576" alt="Изображение главной страницы сайта SEDONA">
             <div class="templates-item-hover">
               <div class="templates-item-info">
@@ -94,7 +107,6 @@
             </div>
           </li>
           <li class="templates-item">
-            <span class="templates-item-header"></span>
             <img src="img/img-pink.jpg" width="360" height="576" alt="Изображение главной страницы сайта PINK">
             <div class="templates-item-hover">
               <div class="templates-item-info">
@@ -105,7 +117,6 @@
             </div>
           </li>
           <li class="templates-item">
-            <span class="templates-item-header"></span>
             <img src="img/img-barbershop.jpg" width="360" height="576" alt="Изображение главной страницы сайта BORODINSKI">
             <div class="templates-item-hover">
               <div class="templates-item-info">
@@ -116,7 +127,6 @@
             </div>
           </li>
           <li class="templates-item">
-            <span class="templates-item-header"></span>
             <img src="img/img-mishka.jpg" width="360" height="576" alt="Изображение главной страницы сайта MISHKA">
             <div class="templates-item-hover">
               <div class="templates-item-info">
@@ -127,7 +137,6 @@
             </div>
           </li>
           <li class="templates-item">
-            <span class="templates-item-header"></span>
             <img src="img/img-aplus.jpg" width="360" height="576" alt="Изображение главной страницы сайта A PLUS">
             <div class="templates-item-hover">
               <div class="templates-item-info">
@@ -138,7 +147,6 @@
             </div>
           </li>
           <li class="templates-item">
-            <span class="templates-item-header"></span>
             <img src="img/img-kvast.jpg" width="360" height="576" alt="Изображение главной страницы сайта КВАСТ">
             <div class="templates-item-hover">
               <div class="templates-item-info">
@@ -153,7 +161,7 @@
           <ul class="pagination-list">
             <li class="pagination-item"><a href="#">1</a></li>
             <li class="pagination-item"><a href="#">2</a></li>
-            <li class="pagination-item pagination-current">3</li>
+            <li class="pagination-item pagination-current"><a href="#">3</a></li>
             <li class="pagination-item"><a href="#">4</a></li>
             <li class="pagination-item pagination-next"><a href="#">Следующая</a></li>
           </ul>
@@ -166,7 +174,7 @@
         <img src="img/map.jpg"
             alt="Изображение карты. Адрес: 191186, Санкт-Петербург,
                 ул. Б. Конюшенная, д. 19/8 тел. +7(812)275-75-75">
-        <b class="footer-studio-name">NERDS DESING STUDIO</b>
+        <b class="footer-studio-name">NЁRDS DESING STUDIO</b>
         <p class="footer-studio-address">
           191186, Санкт-Петербург,<br>
           ул. Б. Конюшенная, д. 19/8
@@ -174,7 +182,7 @@
         <p class="footer-studio-phone">
           тел. +7(812)275-75-75
         </p>
-        <a href="#">Напишите нам</a>
+        <a class="button" href="#">Напишите нам</a>
       </div>
       <div class="social">
         <ul class="social-buttons">
@@ -188,8 +196,8 @@
         </p>
       </div>
       <section>
-          <h2 class="visually-hidden">Форма "Напишите нам"</h2>
-          <form class="form-write-to-us" method="POST" action="https://echo.htmlacademy.ru">
+          <h2>Напишите нам</h2>
+          <form class="write-to-us-form" method="POST" action="https://echo.htmlacademy.ru">
             <p>
               <label for="field-name">Ваше имя:</label>
               <input type="text" id="field-name" name="name" placeholder="Имя Фамилия">
@@ -202,7 +210,7 @@
               <label for="field-message">Текст письма:</label>
               <textarea id="field-message" name="message" placeholder="В свободной форме"></textarea>
             </p>
-            <button type="submit">Отправить</button>
+            <button class="button" type="submit">Отправить</button>
           </form>
         </section>
     </footer>
