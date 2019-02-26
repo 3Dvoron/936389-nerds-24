@@ -5,7 +5,7 @@
     <title>HTML Academy: Нёрдс</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
 
   </head>
   <body>
@@ -35,16 +35,16 @@
     <main class="main-content">
       <h1 class="visually-hidden">Сайт дизайн-студии NERDS</h1>
       <div class="slides">
-        <div class="container">
+        <div class="container slides-wrapper">
           <ul class="slides-switch">
             <li class="slides-switch-case ">
-              <button class="slides-switch-button active-button" type="button" data-for="slide--1" onclick="slider_switch_click_handler(event)">Слайд №1</button>
+              <button class="slides-switch-button active-button" type="button"  onclick="sliderSwitchClickHandler(0)">Слайд №1</button>
             </li>
             <li class="slides-switch-case">
-              <button class="slides-switch-button" type="button" data-for="slide--2" onclick="slider_switch_click_handler(event)" >Слайд №2</button>
+              <button class="slides-switch-button" type="button"  onclick="sliderSwitchClickHandler(1)" >Слайд №2</button>
             </li>
             <li class="slides-switch-case ">
-              <button class="slides-switch-button" type="button" data-for="slide--3" onclick="slider_switch_click_handler(event)" >Слайд №3</button>
+              <button class="slides-switch-button" type="button"  onclick="sliderSwitchClickHandler(2)" >Слайд №3</button>
             </li>
           </ul>
           <ul class="slides-list">
@@ -176,14 +176,7 @@
 
     <footer class="main-footer">
       <div class="footer-contacts">
-        <!-- <iframe
-          width=100%
-          height="416"
-          frameborder="0" style="border:0"
-          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAolwKtLkJJ_-cRcrEzHEGfXMwAFJK_6z4
-          &q=Санкт-Петербург,ул.+Б.+Конюшенная,+д.+19/8">
-        </iframe> -->
-        <div id="map"></div>
+        <div class="map-container" id="map"></div>
         <div class="container">
           <div class="address-box">
             <b class="footer-studio-name">NЁRDS DESIGN STUDIO</b>
@@ -209,7 +202,6 @@
             <b class="social-invitation-text">Давайте дружить, это выгодно!</b>
             <p class="social-invitation-discount">Скидка 10% для друзей из социальных сетей</p>
           </div>
-
         </div>
       </div>
       <section class="write-to-us popap">
@@ -219,25 +211,25 @@
             <div class="form-pair-wrapper">
               <p class="form-field-wrapper">
                 <label for="field-name">Ваше имя:</label>
-                <input type="text" id="field-name" name="name" placeholder="Имя Фамилия">
+                <input class="form-field" type="text" id="field-name" name="name" placeholder="Имя Фамилия">
               </p>
               <p class="form-field-wrapper">
                 <label for="field-email">Ваш e-mail:</label>
-                <input type="email" id="field-email" name="email" placeholder="email@example.com">
+                <input class="form-field" type="email" id="field-email" name="email" placeholder="email@example.com">
               </p>
             </div>
             <p class="form-field-wrapper form-single-wrapper">
               <label for="field-message">Текст письма:</label>
-              <textarea id="field-message" name="message" placeholder="В свободной форме"></textarea>
+              <textarea class="form-field" id="field-message" name="message" placeholder="В свободной форме"></textarea>
             </p>
           </div>
           <button class="button" type="submit">Отправить</button>
         </form>
-        <a class="close-form-button">Закрыть</a>
+        <a class="close-form-button" href="index.html">Закрыть</a>
       </section>
     </footer>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=d2f669b1-7b5c-46b2-8a34-610f2bd8900a&lang=ru_RU" type="text/javascript"></script>
-    <script src="js/features.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=d2f669b1-7b5c-46b2-8a34-610f2bd8900a&lang=ru_RU"></script>
+    <script src="js/features.min.js"></script>
   </body>
 </html>
 
